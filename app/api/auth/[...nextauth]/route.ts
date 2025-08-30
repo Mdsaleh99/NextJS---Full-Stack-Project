@@ -1,5 +1,7 @@
+import NextAuth from "next-auth";
+import { authOptions } from "./options";
 
-// * IMP: we used this ----> https://next-auth.js.org/configuration/providers/credentials
-                            // https://next-auth.js.org/configuration/callbacks 
-// https://next-auth.js.org/configuration/providers/oauth
-// https://next-auth.js.org/configuration/providers/email
+const handler = NextAuth(authOptions)
+
+export {handler as GET, handler as POST}
+
